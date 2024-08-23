@@ -16,7 +16,7 @@ def input():
     type = st.number_input("Type")
     arr = np.array([[bedrooms, bathrooms, status, size, location, face, type]])
     return arr
-check = st.form_submit_button(label="Submit")
+check = st.form_submit_button(label = 'Submit',help=None, on_click=None, args=None, kwargs=None, *, type="secondary", disabled=False, use_container_width=False)
 if (check):
     st.write(model.predict(input())) 
 else:st.write("Please enter all the fields")
