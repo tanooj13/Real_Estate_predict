@@ -15,9 +15,9 @@ def input():
     face = st.number_input("face")
     type = st.number_input("Type")
     arr = np.array([[bedrooms, bathrooms, status, size, location, face, type]])
-    return (arr,True)
+    return arr
     
-check,arr = input()
+check = st.button("Enter", type="primary")
 if (check):
     st.write(model.predict(input())) 
 else:st.write("Please enter all the fields")
